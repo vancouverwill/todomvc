@@ -18,6 +18,7 @@ var app = app || {};
 		// The DOM events specific to an item.
 		events: {
 			'click .toggle': 'toggleCompleted',
+			'click .clicker': 'clicker',
 			'dblclick label': 'edit',
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
@@ -67,7 +68,12 @@ var app = app || {};
 
 		// Toggle the `"completed"` state of the model.
 		toggleCompleted: function () {
+			console.log('edit')
 			this.model.toggle();
+		},
+
+		clicker: function() {
+				console.log("clicker")
 		},
 
 		// Switch this view into `"editing"` mode, displaying the input field.

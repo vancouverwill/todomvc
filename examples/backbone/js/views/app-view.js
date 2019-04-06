@@ -21,7 +21,7 @@ var app = app || {};
 		events: {
 			'keypress .new-todo': 'createOnEnter',
 			'click .clear-completed': 'clearCompleted',
-			'click .toggle-all': 'toggleAllComplete'
+			// 'click .toggle-all': 'toggleAllComplete'
 		},
 
 		// At initialization we bind to the relevant events on the `Todos`
@@ -118,14 +118,14 @@ var app = app || {};
 			return false;
 		},
 
-		toggleAllComplete: function () {
-			var completed = this.allCheckbox.checked;
+		// toggleAllComplete: function () {
+		// 	var completed = this.allCheckbox.checked;
 
-			app.todos.each(function (todo) {
-				todo.save({
-					completed: completed
-				});
-			});
-		}
+		// 	app.todos.each(function (todo) {
+		// 		todo.save({
+		// 			completed: completed
+		// 		});
+		// 	});
+		// }
 	});
 })(jQuery);
